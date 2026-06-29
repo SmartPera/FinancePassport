@@ -1,0 +1,37 @@
+{
+  "rules": {
+
+    "users": {
+      "$uid": {
+        ".read":  "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    },
+
+    "mobileIndex": {
+      ".read":  true,
+      ".write": "auth !== null"
+    },
+
+    "emailIndex": {
+      ".read":  true,
+      ".write": "auth !== null"
+    },
+
+    "referralCodes": {
+      ".read":  true,
+      ".write": "auth !== null"
+    },
+
+    "passportLeads": {
+      ".read":  "auth !== null",
+      ".write": "auth !== null"
+    },
+
+    "stats": {
+      ".read":  true,
+      ".write": "auth !== null"
+    }
+
+  }
+}
